@@ -29,9 +29,9 @@ import {inject, Ref} from 'vue';
 
 export default {
   components: {Topnav},
-  setup(){
+  setup() {
     const asideVisible = inject<Ref<boolean>>('asideVisible');
-    return{asideVisible}
+    return {asideVisible};
   }
 };
 </script>
@@ -40,21 +40,24 @@ export default {
 aside {
   background: skyblue;
   width: 150px;
-  padding: 70px 16px 16px 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  //padding-top: 70px;
+  padding: 16px;
 
   > h2 {
     margin-bottom: 4px;
   }
-  >ol{
-    li{
+
+  > ol {
+    > li {
       padding: 4px 0;
     }
   }
 
+  @media (max-width: 500px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+  }
 
 }
 </style>
