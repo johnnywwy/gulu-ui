@@ -1,11 +1,10 @@
 <template>
   <div>
-    <h1>Switch 示例</h1>
+    <h1>Button 示例</h1>
   </div>
 </template>
 
 <script lang="ts">
-
 
 </script>
 

@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-  border: 1px solid red;
+  //border: 1px solid red;
   background: pink;
   display: flex;
   padding: 16px;
