@@ -40,9 +40,10 @@ span {
   top: 2px;
   left: 2px;
   border-radius: $h2/2;
+  transition: left 250ms;
 }
 
-.checked {
+button.checked {
   background: deepskyblue;
 }
 
