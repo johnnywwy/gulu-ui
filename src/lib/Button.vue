@@ -201,7 +201,7 @@ $grey: grey;
     height: 14px;
     display: inline-block;
     margin-right: 4px;
-    border-radius: 4px;
+    border-radius: 8px;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
