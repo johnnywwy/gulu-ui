@@ -8,7 +8,6 @@
 </template>
 
 <script lang="ts">
-import {ref} from 'vue';
 
 export default {
   props: {
@@ -33,42 +32,44 @@ button {
   border: none;
   background: #bfbfbf;
   position: relative;
-}
 
-span {
-  position: absolute;
-  background: white;
-  width: $h2;
-  height: $h2;
-  top: 2px;
-  left: 2px;
-  border-radius: $h2/2;
-  transition: all 250ms;
-}
-
-button.checked {
-  background: #1890ff;
-}
-
-button.checked > span {
-  //left: 24px;
-  left: calc(100% - #{$h2} - 2px);
-}
-
-button:focus {
-  outline: none;
-}
-
-button:active {
   > span {
-    width: $h2 + 2px;
+    position: absolute;
+    background: white;
+    width: $h2;
+    height: $h2;
+    top: 2px;
+    left: 2px;
+    border-radius: $h2/2;
+    transition: all 250ms;
+  }
+
+  &.checked {
+    background: #1890ff;
+
+    > span {
+      //left: 24px;
+      left: calc(100% - #{$h2} - 2px);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &n:active {
+    > span {
+      width: $h2 + 2px;
+    }
+  }
+
+  &.checked:active {
+    > span {
+      width: $h2 + 4px;
+      margin-left: -4px;
+    }
   }
 }
 
-button.checked:active {
-  > span {
-    width: $h2 + 4px;
-    margin-left: -4px;
-  }
-}
+
 </style>
