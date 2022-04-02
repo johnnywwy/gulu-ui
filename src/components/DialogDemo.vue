@@ -10,8 +10,12 @@
         :cancel="f2"
     >
       <template v-slot:content>
-        <div>你好</div>
-        <div>hi</div>
+        <div>听我说谢谢你
+          因为有你温暖了四季
+          谢谢你感谢有你世界更美丽
+          🌏🌏🌏我要谢谢你
+          因为有你爱常在心底
+          谢谢你 感谢有你‍♂‍♂‍♂把幸福传递~~</div>
       </template>
       <template v-slot:title>
         <strong>加粗的标题</strong>
