@@ -1,19 +1,19 @@
 <template>
   <template v-if="visible">
-    <div class="gulu-dialog-overlay"></div>
+    <div class="gulu-dialog-overlay" @click="closeOnClickOverlay"></div>
     <div class="gulu-dialog-wrapper">
       <div class="gulu-dialog">
         <header>
           标题
-          <span class="gulu-dialog-close"></span>
+          <span @click="close" class="gulu-dialog-close"></span>
         </header>
         <main>
           <p>第一行</p>
           <p>第二行</p>
         </main>
         <footer>
-          <Button level="main">确认</Button>
-          <Button>取消</Button>
+          <Button level="main" @click="ok">确认</Button>
+          <Button @click="cancel">取消</Button>
         </footer>
       </div>
     </div>
@@ -28,9 +28,39 @@ export default {
     visible: {
       type: Boolean,
       default: false
+    },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true
+    },
+    ok: {
+      type: Function
+    },
+    cancel: {
+      type: Function
     }
   },
-  components: {Button}
+  components: {Button},
+  setup(props, context) {
+    const close = () => {
+      context.emit('update:visible', false);
+    };
+    const closeOnClickOverlay = () => {
+      if (props.closeOnClickOverlay) {
+        close();
+      }
+    };
+    const cancel = () => {
+      // {props.ok && props.ok() !== false} === props.ok?.()
+      if (props.ok && props.ok() !== false) {
+        close();
+      }
+    };
+    const ok = () => {
+      context.emit('ok');
+    };
+    return {close, closeOnClickOverlay, cancel, ok};
+  }
 
 };
 </script>
