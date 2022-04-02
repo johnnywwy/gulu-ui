@@ -51,14 +51,14 @@ export default {
         close();
       }
     };
-    const cancel = () => {
-      // {props.ok && props.ok() !== false} === props.ok?.()
-      if (props.cancel && props.cancel() !== false) {
+    const ok = () => {
+      if (props.ok && props.ok() !== false) {
         close();
       }
     };
-    const ok = () => {
-      if (props.ok && props.ok() !== false) {
+    const cancel = () => {
+      // {props.ok && props.ok() !== false} === props.ok?.()
+      if (props.cancel?.() !== false) {
         close();
       }
     };
