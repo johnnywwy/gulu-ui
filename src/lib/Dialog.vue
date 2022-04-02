@@ -4,12 +4,11 @@
     <div class="gulu-dialog-wrapper">
       <div class="gulu-dialog">
         <header>
-          标题
+          {{ title }}
           <span @click="close" class="gulu-dialog-close"></span>
         </header>
         <main>
-          <p>第一行</p>
-          <p>第二行</p>
+          <slot/>
         </main>
         <footer>
           <Button level="main" @click="ok">确认</Button>
@@ -25,6 +24,10 @@ import Button from './Button.vue';
 
 export default {
   props: {
+    title: {
+      type: String,
+      default: '标题'
+    },
     visible: {
       type: Boolean,
       default: false
