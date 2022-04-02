@@ -15,6 +15,7 @@ export const openDialog = (options) => {
           Dialog,
           {
             visible: true,
+            closeOnClickOverlay: false,//false 点击遮罩不会关闭，true 点击遮罩会关闭
             'onUpdate:visible': (newVisible) => {
               if (newVisible === false) {close();}
             },

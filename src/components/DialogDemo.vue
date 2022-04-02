@@ -50,7 +50,8 @@ export default {
         },
         cancel() {
           console.log('cancel');
-        }
+        },
+        closeOnClickOverlay: false
       });
     };
     return {x, toggle, f1, f2, showDialog};
