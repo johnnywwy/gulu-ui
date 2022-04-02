@@ -4,11 +4,11 @@
     <div class="gulu-dialog-wrapper">
       <div class="gulu-dialog">
         <header>
-          {{ title }}
+          <slot name="title"/>
           <span @click="close" class="gulu-dialog-close"></span>
         </header>
         <main>
-          <slot/>
+          <slot name="content"/>
         </main>
         <footer>
           <Button level="main" @click="ok">确认</Button>
@@ -24,10 +24,6 @@ import Button from './Button.vue';
 
 export default {
   props: {
-    title: {
-      type: String,
-      default: '标题'
-    },
     visible: {
       type: Boolean,
       default: false
@@ -55,12 +51,14 @@ export default {
     };
     const cancel = () => {
       // {props.ok && props.ok() !== false} === props.ok?.()
-      if (props.ok && props.ok() !== false) {
+      if (props.cancel && props.cancel() !== false) {
         close();
       }
     };
     const ok = () => {
-      context.emit('ok');
+      if (props.ok && props.ok() !== false) {
+        close();
+      }
     };
     return {close, closeOnClickOverlay, cancel, ok};
   }

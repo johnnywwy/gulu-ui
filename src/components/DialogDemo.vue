@@ -9,8 +9,14 @@
         :ok="f1"
         :cancel="f2"
     >
-      <div>你好</div>
-      <div>hi</div>
+      <template v-slot:content>
+        <div>你好</div>
+        <div>hi</div>
+      </template>
+      <template v-slot:title>
+        <strong>加粗的标题</strong>
+      </template>
+
     </Dialog>
   </div>
 </template>
@@ -27,11 +33,8 @@ export default {
     const toggle = () => {
       x.value = !x.value;
     };
-    const f1 = () => {
-    };
-    const f2 = () => {
-
-    };
+    const f1 = () => {};
+    const f2 = () => {};
     return {x, toggle, f1, f2};
   }
 };
