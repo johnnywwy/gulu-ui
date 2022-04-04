@@ -2,8 +2,8 @@
   <div>Tabs 示例</div>
   <h1>示例1</h1>
   <Tabs v-model:selected="x">
-    <Tab title="导航1">内容1，哈哈哈哈</Tab>
-    <Tab title="导航2">内容2，啦啦啦啦</Tab>
+    <Tab title="导航1">内容1</Tab>
+    <Tab title="导航2咕噜咕噜">内容2，啦啦啦啦</Tab>
   </Tabs>
 </template>
 
