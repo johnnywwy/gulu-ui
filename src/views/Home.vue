@@ -41,7 +41,7 @@ $border-radius: 24px;
 .topnavAndBanner {
   background: rgb(241, 228, 224);
   background: linear-gradient(180deg, rgba(241, 228, 224, 1) 0%, rgba(241, 228, 224, 1) 100%);
-
+  clip-path: ellipse(90% 60% at 50% 40%);
 }
 
 .topnav {
