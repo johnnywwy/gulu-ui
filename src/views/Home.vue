@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$border-radius:24px;
+
 .topnavAndBanner {
   background: rgb(241,228,224);
   background: linear-gradient(180deg, rgba(241,228,224,1) 0%, rgba(241,228,224,1) 100%);
@@ -64,12 +66,17 @@ export default {
     a {
       margin: 0 8px;
       background: #fff;
+      color: #000;
       display: inline-block;
-      $h: 28px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
-      padding: 0 8px;
+      //$h: 28px;
+      //height: $h;
+      //line-height: $h;
+      //border-radius: $h/2;
+      border-radius: $border-radius;
+      padding: 8px 24px;
+      &:hover{
+        text-decoration: none;
+      }
     }
   }
 

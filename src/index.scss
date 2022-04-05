@@ -17,13 +17,15 @@ a {
   color: inherit;
 
   &:hover {
-    border-bottom: 1px solid;
+    text-decoration: underline;
     cursor: pointer;
   }
 }
 
 body {
   font-size: 16px;
+  line-height: 1.5;
+  color: #000;
   // 为什么这样写 font-family
   // 答案见 https://github.com/zenozeng/fonts.css/
   font-family: -apple-system, "Noto Sans", "Helvetica Neue", Helvetica,
