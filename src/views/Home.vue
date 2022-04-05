@@ -1,14 +1,28 @@
 <template>
-  <div class="topnavAndBanner">
-    <Topnav/>
-    <div class="banner">
-      <h1>咕噜 UI</h1>
-      <h2>一个还不错的 UI 框架</h2>
-      <p class="actions">
-        <a href="https://github.com">Github</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
+  <div>
+    <div class="topnavAndBanner">
+      <Topnav/>
+      <div class="banner">
+        <h1>咕噜 UI</h1>
+        <h2>一个还不错的 UI 框架</h2>
+        <p class="actions">
+          <a href="https://github.com">Github</a>
+          <router-link to="/doc">开始</router-link>
+        </p>
+      </div>
     </div>
+    <div class="features">
+      <svg class="icon">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-light"></use>
+      </svg>
+      <svg class="icon">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+    </div>
+
   </div>
 </template>
 
@@ -22,11 +36,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-radius:24px;
+$border-radius: 24px;
 
 .topnavAndBanner {
-  background: rgb(241,228,224);
-  background: linear-gradient(180deg, rgba(241,228,224,1) 0%, rgba(241,228,224,1) 100%);
+  background: rgb(241, 228, 224);
+  background: linear-gradient(180deg, rgba(241, 228, 224, 1) 0%, rgba(241, 228, 224, 1) 100%);
 
 }
 
@@ -52,6 +66,13 @@ $border-radius:24px;
   }
 }
 
+.features {
+  > svg {
+    width: 64px;
+    height: 64px;
+  }
+}
+
 .banner {
   padding: 100px 0;
   display: flex;
@@ -68,13 +89,10 @@ $border-radius:24px;
       background: #fff;
       color: #000;
       display: inline-block;
-      //$h: 28px;
-      //height: $h;
-      //line-height: $h;
-      //border-radius: $h/2;
       border-radius: $border-radius;
       padding: 8px 24px;
-      &:hover{
+
+      &:hover {
         text-decoration: none;
       }
     }
