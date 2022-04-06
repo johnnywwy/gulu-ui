@@ -9,10 +9,10 @@
             <router-link to="/doc/intro">介绍</router-link>
           </li>
           <li>
-            <router-link to="/doc/get-started">开始</router-link>
+            <router-link to="/doc/install">安装</router-link>
           </li>
           <li>
-            <router-link to="/doc/install">安装</router-link>
+            <router-link to="/doc/get-started">开始使用</router-link>
           </li>
         </ol>
         <h2>组件列表</h2>
@@ -51,9 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.router-link-active {
-  text-decoration: underline;
-}
+
 
 .layout {
   display: flex;
@@ -91,7 +89,7 @@ export default {
 aside {
   background: skyblue;
   width: 150px;
-  padding: 70px 16px 16px 16px;
+  padding: 70px 0 16px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -99,12 +97,23 @@ aside {
   z-index: 1;
 
   > h2 {
+    padding: 0 16px;
     margin-bottom: 4px;
   }
 
   > ol {
     > li {
-      padding: 4px 0;
+      > a {
+        display: block;
+        padding: 4px 16px;
+
+      }
+
+      .router-link-active {
+        background: white;
+        text-decoration: none;
+
+      }
     }
   }
 }
