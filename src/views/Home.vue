@@ -36,6 +36,7 @@
         </li>
       </ul>
     </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -87,10 +88,12 @@ $border-radius: 24px;
   @media (min-width: 1200px) {
     width: 1200px;
   }
-  >ul {
+
+  > ul {
     display: flex;
     flex-wrap: wrap;
-    >li {
+
+    > li {
       width: 400px;
       margin: 16px 0;
       display: grid;
@@ -101,16 +104,19 @@ $border-radius: 24px;
         "icon text";
       grid-template-columns: 80px auto;
       grid-template-rows: 1fr auto;
-      >svg {
+
+      > svg {
         grid-area: icon;
         width: 64px;
         height: 64px;
       }
-      >h3 {
+
+      > h3 {
         grid-area: title;
         font-size: 28px;
       }
-      >p {
+
+      > p {
         grid-area: text
       }
     }
