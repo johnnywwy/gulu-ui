@@ -41,7 +41,7 @@ export default {
   //background: pink;
   display: flex;
   padding: 16px;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
