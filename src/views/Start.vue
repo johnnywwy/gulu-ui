@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="markdown-body">
     <h1>
       开始使用
     </h1>
@@ -15,7 +15,7 @@
   &lt;div&gt;&lt;Button&gt;按钮&lt;/Button&gt;&lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
-  import {Button, Tabs, Switch, Dialog} from "king-ui"
+  import {Button, Tabs, Switch, Dialog} from "gulu-ui"
   export default {
     components: {Button}
   }
