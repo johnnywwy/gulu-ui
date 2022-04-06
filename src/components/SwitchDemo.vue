@@ -7,21 +7,15 @@
 </template>
 
 <script lang="ts">
-import Button from '../lib/Button.vue';
 import {ref} from 'vue';
 import Switch1Demo from './Switch1.demo.vue';
 import Switch2Demo from './Switch2.demo.vue';
-import 'prismjs';
-import 'prismjs/themes/prism-solarizedlight.css';
 import Demo from './Demo.vue';
 
-const Prism = (window as any).Prism;
-
 export default {
-  components: {Demo, Button},
+  components: {Demo},
   setup() {
-    const bool = ref(false);
-    return {bool, Switch1Demo, Switch2Demo, Prism};
+    return {Switch1Demo, Switch2Demo};
   }
 };
 
