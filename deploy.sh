@@ -8,3 +8,4 @@ git branch -M main
 git remote add orgin git@github.com:johnnywwy/gulu-ui-website.git
 git push -f -u orgin main
 cd ..
+echo https://johnnywwy.github.io/gulu-ui-website/#/
