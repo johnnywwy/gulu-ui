@@ -95,7 +95,7 @@ aside {
   left: 0;
   height: 100%;
   z-index: 10;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     box-shadow: 2px 2px 5px #ccc;
   }
 
