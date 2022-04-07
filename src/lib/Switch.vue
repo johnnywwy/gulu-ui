@@ -24,6 +24,7 @@ export default {
 <style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
+$green:#65c466;
 .gulu-switch {
   height: $h;
   width: $h*2;
@@ -44,7 +45,7 @@ $h2: $h - 4px;
   }
 
   &.gulu-checked {
-    background: #1890ff;
+    background: $green;
 
     > span {
       //left: 24px;

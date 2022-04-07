@@ -57,8 +57,6 @@ $border-radius: 24px;
 }
 
 .topnav {
-  //border: 1px solid red;
-  //background: pink;
   display: flex;
   padding: 16px;
 
@@ -137,10 +135,10 @@ $border-radius: 24px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  //background: lightgreen;
 
   > .actions {
     padding: 8px 0;
+    font-size: 18px;
 
     a {
       margin: 0 8px;

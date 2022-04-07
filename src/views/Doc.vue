@@ -2,35 +2,37 @@
   <div class="layout">
     <Topnav :toggle-menu-button-visible="true" class="nav"/>
     <div class="content">
-      <aside v-if="asideVisible">
-        <h2>文档</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/intro">介绍</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/install">安装</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/get-started">开始使用</router-link>
-          </li>
-        </ol>
-        <h2>组件列表</h2>
-        <ol>
-          <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/button">Button 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
-          </li>
-          <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
-          </li>
-        </ol>
-      </aside>
+      <transition name="yun">
+        <aside v-if="asideVisible">
+          <h2>文档</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/intro">介绍</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/install">安装</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/get-started">开始使用</router-link>
+            </li>
+          </ol>
+          <h2>组件列表</h2>
+          <ol>
+            <li>
+              <router-link to="/doc/switch">Switch 组件</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/button">Button 组件</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/dialog">Dialog 组件</router-link>
+            </li>
+            <li>
+              <router-link to="/doc/tabs">Tabs 组件</router-link>
+            </li>
+          </ol>
+        </aside>
+      </transition>
       <main>
         <router-view/>
       </main>
@@ -51,8 +53,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 .layout {
   display: flex;
   flex-direction: column;
@@ -112,7 +112,6 @@ aside {
       .router-link-active {
         background: white;
         text-decoration: none;
-
       }
     }
   }
@@ -120,5 +119,20 @@ aside {
 
 main {
   overflow: auto;
+}
+
+.yun-enter-from,
+.yun-leave-to {
+  opacity: 0;
+}
+
+.yun-enter-to,
+.yun-leave-from {
+  opacity: 1;
+}
+
+.yun-enter-active,
+.yun-leave-active {
+  transition: opacity 250ms ease-in-out;
 }
 </style>
