@@ -6,7 +6,7 @@
         <h1>咕噜 UI</h1>
         <h2>一个还不错的 UI 框架</h2>
         <p class="actions">
-          <a href="https://github.com">Github</a>
+          <a href="https://github.com/johnnywwy/gulu-ui-website">Github</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>

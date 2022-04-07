@@ -1,11 +1,11 @@
-rm -rf dist
-yarn build
-cd dist
-git init
-git add .
-git commit -m 'update'
-git branch -M main
+rm -rf dist &&
+yarn build &&
+cd dist &&
+git init &&
+git add . &&
+git commit -m 'update' &&
+git branch -M main &&
 git remote add orgin git@github.com:johnnywwy/gulu-ui-website.git
-git push -f -u orgin main
+git push -f -u orgin main &&
 cd ..
 echo https://johnnywwy.github.io/gulu-ui-website/#/
