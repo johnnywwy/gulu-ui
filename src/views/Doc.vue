@@ -95,6 +95,10 @@ aside {
   left: 0;
   height: 100%;
   z-index: 10;
+  @media (max-width: 400px) {
+    box-shadow: 2px 2px 5px #ccc;
+  }
+
 
   > h2 {
     padding: 0 16px;
@@ -124,15 +128,19 @@ main {
 .yun-enter-from,
 .yun-leave-to {
   opacity: 0;
+  transform: translateX(-150px);
 }
 
 .yun-enter-to,
 .yun-leave-from {
   opacity: 1;
+  transform: translateX(0px);
+
 }
 
 .yun-enter-active,
 .yun-leave-active {
-  transition: opacity 250ms ease-in-out;
+  transition: all 250ms ease;
 }
+
 </style>
